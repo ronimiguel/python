@@ -2,7 +2,7 @@ import random
 
 	# draw the dice numbers on the screen
 def side1 ():
-	print ('.*****.')
+	print ('.******')
 	print (':     :')
 	print (':  O  :')
 	print (':     :')
@@ -44,11 +44,11 @@ def side6 ():
 	print (':.....:')
 
 # print the dice 
-def printRoll():
+def rollDice():
 	# give the dice a random number
 	dice = int(random.randint(1,6))
 
-	# check wich side of the dice is up and print
+	# check dice result and and print it's side
 	if dice == 1 :
 		return side1()
 
@@ -70,24 +70,22 @@ def printRoll():
 def rollAgain():
 	
 	while True:
-		try:
-			x = int(input('\nWould you like to roll the dice?\n\nPress 1 = YES\nPress 2 = Exit: '))
-			if x == 1:
-				printRoll()
+		try: # there must be a better way to code this,maybe make userAnswer a Function
+			userAnswer = int(input('\nWould you like to roll the dice?\n\nPress 1 = YES\nPress 2 = Exit: '))
+			if userAnswer == 1:
+				rollDice()
 				rollAgain()
 		except ValueError:
 			print ('\nINVALID OPTION')
 			continue
-		if x > 2:
+		if userAnswer > 2:
 			#Option for EXIT the program
 			print ('\nINVALID OPTION')
 			continue
 		else:
-			# x returned a valid number
+			# user returned a valid number
 			break
 
-	# infinite user prompt, there is probably a much better way to right this, for now this works :)
-	
-# print the dice 1st roll
-printRoll()
+
+rollDice()
 rollAgain()
