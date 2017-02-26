@@ -1,5 +1,5 @@
 import random
-
+#cool dice :)
 	# draw the dice numbers on the screen
 def side1 ():
 	print ('.******')
