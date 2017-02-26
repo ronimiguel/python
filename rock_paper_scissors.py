@@ -150,7 +150,7 @@ def main():
 		draw_paper()
 			
 	elif user ==3 and pc == 3:
-	  draw_scissors()
+	  	draw_scissors()
 			
 	elif user == 1 and pc == 2:
 		lose_rock_vs_paper() 
