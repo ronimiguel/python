@@ -150,7 +150,7 @@ def main():
 		draw_paper()
 			
 	elif user ==3 and pc == 3:
-	   draw_scissors()
+	  draw_scissors()
 			
 	elif user == 1 and pc == 2:
 		lose_rock_vs_paper() 
@@ -179,8 +179,8 @@ welcome_msg()
 main()
 
 while True:
-    again = input("1 = PLAY AGAIN or Press ENTER to EXIT: ")
-    if again == '1':    # made this a string because if the user typed a letter 
+    play_again = input("1 = PLAY AGAIN or Press ENTER to EXIT: ")
+    if play_again == '1':    # made this a string because if the user typed a letter 
         main()          # the game would crash
 
     else:
