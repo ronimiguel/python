@@ -68,7 +68,7 @@ def rollDice():
 
 #prompt if the user wants to roll the dice again....
 def rollAgain():
-	
+	# prompt user until he gives a valid answer
 	while True:
 		try: # there must be a better way to code this,maybe make userAnswer a Function
 			userAnswer = int(input('\nWould you like to roll the dice?\n\nPress 1 = YES\nPress 2 = Exit: '))
@@ -78,7 +78,7 @@ def rollAgain():
 		except ValueError:
 			print ('\nINVALID OPTION')
 			continue
-		if userAnswer > 2:
+		if userAnswer == 0 or userAnswer > 2:
 			#Option for EXIT the program
 			print ('\nINVALID OPTION')
 			continue
